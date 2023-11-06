@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:ital,wght@1,100&display=swap');
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #f5f5f5;
+}
+
+:root{
+    --offcanvas-width:270px;
+    --topNavbarHeight:56px;
+}
+
+.user-icon{
+    width:30px;
+}
+
+.sidebar-nav{
+    width: var(--offcanvas-width) !important;
+}
+
+.sidebar-link .right-icon {
+    transition: all 0.3s;
+} 
+
+.sidebar-link[aria-expanded = "true"] .right-icon {
+    transform: rotate(180deg);
+}
+
+
+
+@media(min-width:992px) {
+
+    .offcanvas-backdrop{
+        display: none !important;
+    }
+
+    .sidebar-nav {
+        transform: none !important;
+        visibility: visible !important;
+        top:var(--topNavbarHeight) !important;
+    }
+
+    main{
+        margin-left: var(--offcanvas-width);
+    }
+}
+
+
+@media ( max-width: 480px){
+    .dashboard-counts .card{
+        margin-bottom: 20px;
+    }
+
+    .dashboard-tabs .nav-tabs .nav-link {
+        padding: 6px;
+        font-size: 12px;
+    }
+}
+
+    
